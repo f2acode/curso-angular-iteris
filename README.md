@@ -34,48 +34,54 @@
   - services - cuida das requisições HTTP etc
   - routes - muda a tela baseando-se nas rotas
 
-### Programando
+## Programando
 
-#### Module
+### Module
   - declarations - lista de componentes, diretivas e pipe do módulo
   - exports - sub-conjunto de declarations dispónível para ser usado em outros módulos
   - imports - outros módulos que são utilizados
   - providers - serviços para serem usados através de injeção de dependência
   - bootstrap (não tem tempo)
 
-## Service
+### Service
   - instância é singleton, se quisermos uma única para um componente, então devemos declará-lo dentro do componente
   - é possível fazer injeção de dependência, padrão: `{ provide: ILogService, useClass: MyLogService}`
   - Angular 6+: O próprio serviço pode fazer a injeção de dependência, através do `provideIn`
 
-## Validação
+### Validação
   - ReactiveForms etc. Formulários!
   - template-driven e model-driven (Reactive Forms)
   - dynamic-form
 
-## Segurança com routes
+### Segurança com routes
   - O Angular routes apresenta funcionalidades para controlar a permissão do usuário
   - `canActive`
   - `HttpInterceptor`
 
-## UI Libs
+### UI Libs
   - @Angular material
   - primeng
   - template (starter kits)
   - Schematics - é a forma que o AngularCLI modelos para gerar components, services etc. Ainda pouco usado, o Angular Material oferece um conjunto
 
-## Links interessantes
-  - https://angular.io/guide/cheatsheet
-  - https://angular.io/api/core/Directive
-  - https://update.angular.io/
-  - https://github.com/douglasfernandesjr/exemplos/tree/master/Angular/Workshop
-  - https://angular.io/guide/dynamic-form
-  - https://github.com/ngx-rocket/starter-kit
+### Environments
+  - Basta importar a referência e usar :D
+  - Deploy - ver links
 
-## Dicas
+### Links interessantes
+  - [Dicas de desenvolvimento](https://angular.io/guide/cheatsheet)
+  - [Directive](https://angular.io/api/core/Directive)
+  - [Dicas de atualização de projetos Angular](https://update.angular.io/)
+  - [Projeto original Workshop](https://github.com/douglasfernandesjr/exemplos/tree/master/Angular/Workshop)
+  - [Dinamic Form](https://angular.io/guide/dynamic-form)
+  - [Starter kit](https://github.com/ngx-rocket/starter-kit)
+  - [Deployment](https://angular.io/guide/deployment)
+  - [Architecture in Angular](https://medium.com/@cyrilletuzi/architecture-in-angular-projects-242606567e40)
+
+### Dicas
   - Observable não consegue tratar erros (quando usado em autocomplete, por exemplo), então é necessário colocar um tratamento de erro no meio do fluxo de dados
   - Dentro de routes é possível definir um `component` e alguns `children`, definindo assim um layout base para todos os outros
 
-## TODO
+### TODO
   - diferença entre componentes e diretivas
   - `@input` e `@output`
