@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
+import { Pais } from './pais';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PesquisaPaisesService {
+  baseUrl:string = 'https://restcountries.eu/rest/v2/lang/'
 
   /* 
   shortcut dizendo que estamos recebendo a variável como parâmetro
@@ -12,5 +14,9 @@ export class PesquisaPaisesService {
   */
   constructor(private http: HttpClient) {
 
+  }
+
+  public ListarPaises(langCode: string){
+    return this.http.get<Pais[]>(this.baseUrl + langCode)
   }
 }

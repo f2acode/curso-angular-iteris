@@ -24,6 +24,7 @@
   - `ng generate componente <component_name>` - gera um componente com todos os arquivos necessários
   - `ng generate module <module_name>` - gera um módulo
   - `ng generate service <service_name>` - gera um serviço
+  - `ng generate class <class_name>` - pode ser usada como modelo
 ### Testes
   - e2e - para testes end-to-end, cria cenários para testes
   - .spec - testes unitários, para cada component

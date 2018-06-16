@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { PesquisaPaisesService } from '../pesquisa-paises.service'
+import { Observable } from 'rxjs'
+import { FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-listapaises',
@@ -6,12 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listapaises.component.css']
 })
 export class ListapaisesComponent implements OnInit {
-  listaPaises:string[]
+  listaPaises: string[]
+  lang: string
 
-  constructor() { }
+  constructor(private service: PesquisaPaisesService) { }
 
   ngOnInit() {
-    this.listaPaises = ['Brasil', 'Argentina', 'México'];
+    this.listaPaises = []
+  }
+
+  public updateLista() {
+    this.service
+      .ListarPaises(this.lang).subscribe(
+        (lista) => (
+          lista.forEach(v => {
+            this.listaPaises.push(v.name)
+          })
+        )
+      )
   }
 
 }
