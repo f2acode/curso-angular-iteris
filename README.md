@@ -48,10 +48,33 @@
   - é possível fazer injeção de dependência, padrão: `{ provide: ILogService, useClass: MyLogService}`
   - Angular 6+: O próprio serviço pode fazer a injeção de dependência, através do `provideIn`
 
+## Validação
+  - ReactiveForms etc. Formulários!
+  - template-driven e model-driven (Reactive Forms)
+  - dynamic-form
+
+## Segurança com routes
+  - O Angular routes apresenta funcionalidades para controlar a permissão do usuário
+  - `canActive`
+  - `HttpInterceptor`
+
+## UI Libs
+  - @Angular material
+  - primeng
+  - template (starter kits)
+  - Schematics - é a forma que o AngularCLI modelos para gerar components, services etc. Ainda pouco usado, o Angular Material oferece um conjunto
+
 ## Links interessantes
   - https://angular.io/guide/cheatsheet
   - https://angular.io/api/core/Directive
   - https://update.angular.io/
+  - https://github.com/douglasfernandesjr/exemplos/tree/master/Angular/Workshop
+  - https://angular.io/guide/dynamic-form
+  - https://github.com/ngx-rocket/starter-kit
+
+## Dicas
+  - Observable não consegue tratar erros (quando usado em autocomplete, por exemplo), então é necessário colocar um tratamento de erro no meio do fluxo de dados
+  - Dentro de routes é possível definir um `component` e alguns `children`, definindo assim um layout base para todos os outros
 
 ## TODO
   - diferença entre componentes e diretivas

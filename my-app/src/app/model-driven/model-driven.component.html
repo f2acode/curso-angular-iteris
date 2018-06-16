@@ -1,0 +1,12 @@
+<form [formGroup]="pageForm">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" formControlName="nome">
+    <div [hidden]="pageForm.controls.nome?.valid || pageForm.controls.nome?.pristine" class="alert alert-danger">
+      <span [hidden]="!pageForm.controls.nome?.errors?.required">Campo Obrigatório</span>
+    </div>
+  </div>
+  <div>
+    <button [disabled]="pageForm.invalid || pageForm.pending" class="btn">Salvar</button>
+  </div>
+</form>

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core'
 import { PesquisaPaisesService } from '../pesquisa-paises.service'
-import { Observable } from 'rxjs'
-import { FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-listapaises',
